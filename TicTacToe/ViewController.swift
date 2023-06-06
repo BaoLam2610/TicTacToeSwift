@@ -32,23 +32,23 @@ class ViewController: UIViewController {
     }
 
     // truyen du lieu sang man khac
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let controller = segue.destination as? GameViewController {
-//            controller.playerName = txtPlayerName.text
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? GameViewController {
+            controller.playerName = txtPlayerName.text
+        }
+    }
     
     // validate trc khi chuyen man
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "navigateToGameVC" {
-//            if txtPlayerName.text!.trimmingCharacters(in: .whitespaces).isEmpty {
-//                return false
-//            }
-//        }
-//
-//        // false => k chuyen
-//        // true => ok
-//        return true
-//    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "navigateToGameVC" {
+            if txtPlayerName.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+                return false
+            }
+        }
+
+        // false => k chuyen
+        // true => ok
+        return true
+    }
 }
 
